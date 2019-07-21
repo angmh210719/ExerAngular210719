@@ -1,0 +1,122 @@
+//exer 1 
+//function print(){
+ // console.log(msg)
+//}
+
+ console.log("exer 1")
+const myself={name:'mhari',age:90,address:[{country:'chalal',city:'earth'},],
+                                 family:[{name:'mhari1', age:120},{name:'mhari2', age:130},{name:'mhari3', age:140},]
+                                };
+             
+
+function print()
+{
+ 	console.log("name: "+myself.name)
+  
+   for (var a in myself.address){
+  console.log("Address:"+myself.address[a].country+" "+myself.address[a].city)
+   }
+  for (var f in myself.family){
+  console.log(myself.family[f].name+" "+myself.family[f].age)
+ }
+ }
+
+print(myself)
+console.log("end exer 1")
+//end exer 1
+
+
+//exer2
+console.log("exer 2")
+const myself2={name:'mhari',getName() {
+               return this.name
+             },
+            printName() {
+              console.log( this.name )
+            },age:90,address:{country:'chalal',city:'earth'},
+                                 family:[{name:'mhari1', age:120},{name:'mhari2', age:130},{name:'mhari3', age:140}],getFamliynum(){
+                                   console.log("num of my family: "+this.family.length);
+                                                                }
+                                };
+
+
+console.log(myself2.getName())
+myself2.printName()
+myself2.getFamliynum()
+
+console.log("end exer 2")
+
+//end exer2
+
+
+//exer 3
+console.log("exer 3")
+function createMobliePhone(model,size,price,number){
+  this.model=model
+  this.size=size
+  this.price=price
+  this.number=number
+  this.getNumber=function(){
+    return this.number
+  }
+  this.setNumber=function(num){
+    this.number=num
+  }
+}
+
+const mobile=new createMobliePhone('g',6,2000,123456789);
+  
+console.log(mobile.getNumber())
+mobile.setNumber(11111111);
+console.log(mobile.getNumber())
+console.log("end exer 3")
+//end exer3
+
+
+//Exer 4
+
+console.log("exer 4")
+function createMobliePhone2(model,size,price,number){
+  this.model=model
+  this.size=size
+  let _price=0
+  let _model=""
+  this.getPrice=()=> {return _price} 
+    
+   this.setPrice=(newPrice)=> { if(newPrice>0 && newPrice>_price){
+     _price=newPrice     
+   }
+                     } 
+   
+                      
+  
+  this.getModel=()=> {return _model}
+  
+  this.setModel=(newModel)=> { if(newModel!=null && newModel.lentgh>4){
+     _model=newModel     
+   }
+                             }
+
+   
+ 
+  this.getNumber=function(){
+    return this.number
+  }
+  this.setNumber=function(num){
+    this.number=num
+  }
+}
+
+const mobile2=new createMobliePhone2('g',6,-111,123456789);
+
+console.log("price: "+mobile2.getPrice())
+mobile2.setPrice(4);
+console.log(mobile2.getPrice())
+
+console.log(mobile2.getModel())
+mobile2.setModel("ddsddfdf");
+console.log(mobile2.getModel())
+
+
+console.log("end exer 4")
+//end exer 4
